@@ -5,8 +5,8 @@
   <%= f.input :service_id, collection: Service.all, as: :select, include_blank: false %>
 
   <div class="form-actions">
-    <%= f.button :submit, :class => 'btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                admin_plans_path, :class => 'btn' %>
+    <%= f.button :submit, class: 'btn-primary' %>
+    <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                admin_plans_path, class: 'btn' %>
   </div>
 <% end %>
