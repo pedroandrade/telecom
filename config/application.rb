@@ -64,5 +64,7 @@ module Telecom
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.mongoid.logger = Logger.new($stdout, :warn)
+    Mongoid.load!("config/mongoid.yml")
   end
 end

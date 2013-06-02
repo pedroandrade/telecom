@@ -1,0 +1,15 @@
+<div class="well">
+	<h1>Services</h1>
+	<% @services.each do |service| %>
+		<div class="alert alert-block">
+			<h3><%= service.name %></h3>
+			<% service.plans.each do |plan| %>
+			<dl>
+				<dt><h5><%= plan.name %><h5></dt>
+				<dt class="plan_description"><%= plan.description %></dt>
+				<dt>R$ <%= plan.price %>/month</dt>
+			</dl>
+			<% end %>
+		</div>
+	<% end %>
+</div>

@@ -9,5 +9,22 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require "bootstrap_and_overrides"
  */
+body { padding-top: 60px; }
+
+.plans_content {
+	width: 200px important!; 
+	height: 300px;
+	border: 1px solid red; 
+	float: left;
+	background-color: '#606060';
+}
+
+.service_content {
+	height: 500px;
+}
+
+.plan_description{
+	white-space: pre-wrap;
+}

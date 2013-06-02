@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h1>Plan</h1>
+</div>
+
+<dl class="dl-horizontal">
+
+  <dt><strong>Name:</strong></dt>
+  <dd><%= @plan.name %></dd>
+  <dt><strong>Description:</strong></dt>
+  <dd><%= @plan.description %></dd>
+  <dt><strong>Price:</strong></dt>
+  <dd><%= @plan.price %></dd>
+  <dt><strong>Service:</strong></dt>
+  <dd><%= @plan.service.name %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              admin_plans_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_admin_plan_path(@plan), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              admin_plan_path(@plan),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
