@@ -4,16 +4,16 @@ describe Service do
 
   subject { create_service }
 
-	context 'properly filling the attributes' do
-		its(:name) { should_not be_blank}
+  context 'properly filling the attributes' do
+    its(:name) { should_not be_blank}
   end
 
   context 'validations' do
 
     it 'validates attributes' do
-			service = Service.create
-  		service.errors.size.should == 1
-		end
+      service = Service.create
+      service.errors.size.should == 1
+    end
 
     it 'validates name attribute' do
       service = Service.create(name: '')
