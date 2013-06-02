@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
 
-	layout 'home'
+  layout 'home'
 
-	def index
+  def index
     @services = Service.all
-	end
+  end
 end
