@@ -8,5 +8,6 @@ Telecom::Application.routes.draw do
 
   root :to => 'home#index'
 
-
+  match 'admin' => 'admin::services#index'
+  
 end
