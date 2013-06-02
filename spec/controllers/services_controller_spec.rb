@@ -112,5 +112,4 @@ describe Admin::ServicesController do
       response.should redirect_to(admin_services_url)
     end
   end
-
 end
