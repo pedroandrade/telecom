@@ -1,21 +1,23 @@
-<div class="well">
-	<h1>Services</h1>
-	<% @services.each do |service| %>
-		<div class="alert alert-block">
-			<h3><%= service.name %></h3>
-			<% service.plans.each do |plan| %>
-			<dl>
-				<dt><h5><%= plan.name %><h5></dt>
-				<dt class="plan_description"><%= plan.description %></dt>
+
+<h1>Services</h1>
+<% @services.each do |service| %>
+	<div class="alert alert-block">
+		<h3><%= service.name %></h3>
+		<% service.plans.each do |plan| %>
+		<dl>
+			<dt><h5><%= plan.name %><h5></dt>
+			<dt class="plan_description"><%= plan.description %></dt>
 			</br>
-				<dt>Price: Only R$ <%= plan.price %>/month</dt>
-			</dl>
+			<dt>Price: Only R$ <%= plan.price %>/month</dt>
+			<dl><button class="btn btn-info">Contratar</button></dl>
+		</dl>
+			
 			<% end %>
 		</div>
-	<% end %>
-</div>
+<% end %>
+
 
 <div class="alert alert-info">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Warning!</strong> The services is only for Brazil
+  <strong>Info!</strong> The services are just for brazil
 </div>
