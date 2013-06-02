@@ -14,17 +14,17 @@
 body { padding-top: 100px; }
 
 .plans_content {
-	width: 200px important!; 
-	height: 300px;
-	border: 1px solid red; 
-	float: left;
-	background-color: '#606060';
+  width: 200px important!;
+  height: 300px;
+  border: 1px solid red;
+  float: left;
+  background-color: '#606060';
 }
 
 .service_content {
-	height: 500px;
+  height: 500px;
 }
 
 .plan_description{
-	white-space: pre-wrap;
+  white-space: pre-wrap;
 }
