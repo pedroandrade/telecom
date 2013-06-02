@@ -7,9 +7,15 @@
 			<dl>
 				<dt><h5><%= plan.name %><h5></dt>
 				<dt class="plan_description"><%= plan.description %></dt>
-				<dt>R$ <%= plan.price %>/month</dt>
+			</br>
+				<dt>Price: Only R$ <%= plan.price %>/month</dt>
 			</dl>
 			<% end %>
 		</div>
 	<% end %>
+</div>
+
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Warning!</strong> The services is only for Brazil
 </div>
