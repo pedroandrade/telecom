@@ -1,13 +1,13 @@
 class Plan
-	include Mongoid::Document
+  include Mongoid::Document
 
-	attr_accessible :name, :description, :price, :service_id
+  attr_accessible :name, :description, :price, :service_id
 
-	field :name, type: String
-	field :description, type: String
-	field :price, type: Float
+  field :name, type: String
+  field :description, type: String
+  field :price, type: Float
 
-	belongs_to :service
+  belongs_to :service
 
-	validates_presence_of :name, :description, :price, :service_id
+  validates_presence_of :name, :description, :price, :service_id
 end
