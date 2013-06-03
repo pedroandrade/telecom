@@ -7,6 +7,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Price</th>
+      <th>Service</th>
       <th><%=t '.actions', default: t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -15,7 +16,8 @@
       <tr>
         <td><%= link_to plan.name, admin_plan_path(plan) %></td>
         <td><%= plan.description %></td>
-        <td><%= plan.price %></td>
+        <td><%= number_to_currency(plan.price, :unit => "R$") %></td>
+        <td><%= plan.service.name %></td>
         <td>
           <%= link_to t('.edit', default: t("helpers.links.edit")),
                       edit_admin_plan_path(plan), class: 'btn btn-mini' %>
