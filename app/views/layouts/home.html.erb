@@ -27,21 +27,23 @@
           <a class="brand" href="/">Telecom</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Noticias", "#"  %></li>
+              <li><%= link_to "News", "#"  %></li>
               <li><%= link_to "Combos", "#"  %></li>
-              <li><%= link_to "Contato", "#"  %></li>
+              <li><%= link_to "Contact", "#"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" role="main">
       <header class="jumbotron subhead">
         <div class="row">
           <div class="span6">
             <h1>Telecom</h1>
-
+            <p class="lead">
+              Your life easier...
+            </p>
           </div>
         </div>
       </header>
@@ -55,8 +57,8 @@
               <h3>Need Help?</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Contact</li>
-                <li><%= link_to "Erros?", "/path1"  %></li>
                 <li><%= link_to "Chat with us", "/path2"  %></li>
+                <li><%= link_to "Leave a message", "/path2"  %></li>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
@@ -65,13 +67,11 @@
       <footer>
         <p>&copy; Pedro Andrade 2013</p>
       </footer>
-
     </div> <!-- /container -->
 
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
-
   </body>
 </html>
