@@ -5,7 +5,7 @@ class Plan
 
   field :name, type: String
   field :description, type: String
-  field :price, type: Float
+  field :price, type: Money
 
   belongs_to :service
 

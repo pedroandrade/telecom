@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'mongoid', '>= 3.0.3'
 gem 'devise', '>= 2.1.2'
 gem 'simple_form'
+gem 'money-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

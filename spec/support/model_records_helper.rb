@@ -16,7 +16,7 @@ module ModelRecordsHelper
     {
       name: "plan-#{sequence}",
       description: '192 channels',
-      price: 199.99,
+      price: Money.new(199,'BRL'),
       service_id: create_service.id
     }
   end

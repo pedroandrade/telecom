@@ -8,7 +8,7 @@ describe Plan do
 
     its(:service) { should_not be_blank }
     its(:description) { should == '192 channels'}
-    its(:price) { should == 199.99}
+    its(:price) { should == Money.new(199,'BRL')}
     its(:name) { should_not be_blank}
   end
 
@@ -20,7 +20,7 @@ describe Plan do
     end
 
     it 'validates the description attribute' do
-      plan = Plan.create(name: 'Name', price: 199, service_id: create_service.id)
+      plan = Plan.create(name: 'Name', price: Money.new(199,'BRL'), service_id: create_service.id)
       validates_blank_attribute(plan, :description)
     end
 
@@ -30,12 +30,12 @@ describe Plan do
     end
 
     it 'validates the name attribute' do
-      plan = Plan.create(price: 1.8, service_id: create_service.id, description: 'description')
+      plan = Plan.create(price: Money.new(199,'BRL'), service_id: create_service.id, description: 'description')
       validates_blank_attribute(plan, :name)
     end
 
     it 'validates the service_id attribute' do
-      plan = Plan.create(price: 1.8, description: 'description', name: 'name')
+      plan = Plan.create(price: Money.new(199,'BRL'), description: 'description', name: 'name')
       validates_blank_attribute(plan, :service_id)
     end
   end
